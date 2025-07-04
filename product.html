@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whey Protein Showcase</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1b1b1b;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .showcase-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to right, #7e0e27, #32000a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .background-text {
+      position: absolute;
+      font-size: 10rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.05);
+      white-space: nowrap;
+      z-index: 0;
+      pointer-events: none;
+    }
+.social-links {
+  margin-top: 40px;
+}
+
+.social-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff914d;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #eee;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff914d;
+}
+
+    .moving-image {
+      position: absolute;
+      width: 250px;
+      animation: moveLeftRight 6s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes moveLeftRight {
+      0% {
+        left: 5%;
+      }
+      100% {
+        left: 75%;
+      }
+    }
+
+    .info-section {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: rgba(30, 30, 30, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .feature-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background: #292929;
+      padding: 15px;
+      width: 200px;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .feature-card h3 {
+      color: #ff914d;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .contact-footer {
+  background: #111;
+  color: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff914d;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #ff914d;
+}
+.flashy-highlight {
+background: #ff5733 
+
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+.pulse-text {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ff914d;
+  animation: pulse 1.5s infinite;
+  text-shadow: 0 0 10px #ff914d;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #eee;
+  margin: 20px 0;
+}
+
+/* Reuse button from earlier */
+.flash-buy-btn {
+  background-color: #ff914d;
+  color: black;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: flash 1.2s infinite ease-in-out;
+  box-shadow: 0 0 10px #ff914d;
+  transition: transform 0.3s;
+}
+
+.flash-buy-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes flash {
+  0%, 100% {
+    box-shadow: 0 0 10px #ff914d, 0 0 20px #ff914d, 0 0 30px #ff914d;
+  }
+  50% {
+    box-shadow: 0 0 0px #ff914d;
+  }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* behind everything */
+  background: #420016; /* your original background */
+}
+
+  </style>
+</head>
+<body>
+  <div class="showcase-container">
+    <div class="background-text">WHEY PROTEIN</div>
+    <img src="images/vanilla1.png" alt="Whey Protein" class="moving-image">
+    
+    <section class="info-section">
+      <h2 class="tagline">Build Muscle. Recover Faster. Perform Better.</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>24g Protein</h3>
+          <p>High-quality protein per scoop for lean muscle building.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Low Sugar</h3>
+          <p>Zero unnecessary sugar to keep your gains clean.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fast Absorption</h3>
+          <p>Quick digestion to refuel muscles after intense training.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="flashy-highlight">
+  <div class="highlight-content">
+    <h2 class="pulse-text">LIMITED TIME OFFER</h2>
+    <p class="subtitle">Order now and get free shaker + delivery!</p>
+    <button class="flash-buy-btn">Buy Now →</button>
+  </div>
+</section>
+<div id="particles-js"></div>
+
+  <footer class="contact-footer">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>123 Fitness Street, Mumbai, India</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <p>+91 98765 4XXXX</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>support@wheykingdom.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="social-links">
+  <h3>Follow Us On<h3>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><br>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a><br>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
+
+</footer>
+
+</body>
+</html>
